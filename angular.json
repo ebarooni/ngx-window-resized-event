@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-window-resized-event": {
+      "projectType": "library",
+      "root": "projects/ngx-window-resized-event",
+      "sourceRoot": "projects/ngx-window-resized-event/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-window-resized-event/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-window-resized-event/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-window-resized-event/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ngx-window-resized-event/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
