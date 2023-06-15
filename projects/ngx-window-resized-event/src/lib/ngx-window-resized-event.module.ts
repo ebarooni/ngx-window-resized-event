@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
-import { NgxWindowResizedEventComponent } from './ngx-window-resized-event.component';
-
-
+import { WindowResizedDirective } from './window-resized.directive';
 
 @NgModule({
   declarations: [
-    NgxWindowResizedEventComponent
-  ],
-  imports: [
+    WindowResizedDirective,
   ],
   exports: [
-    NgxWindowResizedEventComponent
+    WindowResizedDirective,
   ]
 })
 export class NgxWindowResizedEventModule { }
